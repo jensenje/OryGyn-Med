@@ -1,71 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About Us - OryGyn Medical Devices</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .leadership-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-            justify-content: center;
-            margin-bottom: 2em;
-        }
-        .leadership-grid div {
-            text-align: center;
-            max-width: 220px;
-        }
-        .leadership-grid img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>About Us - OryGyn Medical Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafcff; }
+    header { display: flex; align-items: center; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #e3e3e3; }
+    header img { height: 50px; margin-right: 1.5rem; }
+    nav { flex: 1; }
+    nav a { margin: 0 1rem; color: #304767; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #2878c0; }
+    main { max-width: 900px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(60,80,100,0.08); }
+    h1, h2, h3 { color: #214060; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
+    .team-card { background: #f6f9fc; border-radius: 16px; box-shadow: 0 1px 5px rgba(80,90,110,0.09); padding: 1.5rem 1rem; text-align: center; }
+    .team-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 3px solid #e0e6ee; background: #fff; }
+    .team-card h3 { margin: 1rem 0 0.5rem; font-size: 1.13em; }
+    .team-card p { margin: 0.2rem 0; color: #3d4d5d; font-size: 0.97em; }
+    .advisory-section { margin-bottom: 2.5rem; }
+    .advisory-section h2 { margin-bottom: 0.7rem; }
+    .advisory-list { list-style: none; padding: 0; margin: 0; }
+    .advisory-list li { margin-bottom: 1.2rem; }
+    .advisory-name { font-weight: 600; color: #22508b; }
+    .advisory-role { font-style: italic; color: #555; }
+    footer { text-align: center; padding: 1rem 0; background: #f0f5fa; color: #757d8a; font-size: 0.95em; margin-top: 2rem; }
+    @media (max-width: 600px) {
+      main { padding: 0.8rem; }
+      .team-grid { gap: 1rem; }
+      header { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+      nav { width: 100%; margin-top: 0.7rem; }
+      nav a { display: inline-block; margin: 0.3rem 0.7rem 0.3rem 0; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-    </header>
+  <header>
+    <img src="assets/logo.jpg" alt="OryGyn Medical Devices logo">
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="technology.html">Our Technology</a>
-        <a href="pipeline.html">Pipeline</a>
-        <a href="investors.html">Investors</a>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="technology.html">Technology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="investors.html">Investors</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <section>
-        <h2>Leadership Team</h2>
-        <div class="leadership-grid">
-            <div><img src="assets/team_1.png" alt="Jeffrey Jensen"><p><strong>Dr. Jeffrey T. Jensen, MD, MPH – Founder and Chief Medical Officer</strong><br>Renowned gynecologist and researcher with 35+ years in women’s health, previously at OHSU and currently leading development of gynecologic therapeutics.</p></div>
-            <div><img src="assets/team_2.png" alt="Philberta Leung"><p><strong>Philberta Leung, PhD, PMP – Project Manager</strong><br>Neuroscientist and certified project manager with biotech experience, expert in database, IP, and team coordination.</p></div>
-            <div><img src="assets/team_3.png" alt="Jian Xin Guo"><p><strong>Jian Xin Guo, PhD – Chief Scientific Officer</strong><br>Polymer chemist with a background at Johnson & Johnson and OHSU, specializing in foam-based therapeutic delivery systems.</p></div>
-            <div><img src="assets/team_4.png" alt="Holly Rockweiler"><p><strong>Holly Rockweiler, MS – Chief Technology Officer</strong><br>CEO of Madorra and former Stanford Biodesign Fellow, experienced in medical device innovation and NIH-funded research.</p></div>
-        </div>
+  </header>
+  <main>
+    <h1>About Us</h1>
+    <h2>Leadership Team</h2>
+    <div class="team-grid">
+      <!-- Jensen -->
+      <div class="team-card">
+        <img src="assets/team_1.png" alt="Dr. Jeffrey T. Jensen, MD, MPH">
+        <h3>Dr. Jeffrey T. Jensen, MD, MPH</h3>
+        <p class="team-title">Founder & Chief Medical Officer</p>
+        <p>Renowned gynecologist and researcher with 35+ years in women’s health, previously at OHSU and currently leading development of gynecologic therapeutics.</p>
+      </div>
+      <!-- Leung -->
+      <div class="team-card">
+        <img src="assets/team_2.png" alt="Philberta Leung, PhD, PMP">
+        <h3>Philberta Leung, PhD, PMP</h3>
+        <p class="team-title">Project Manager</p>
+        <p>Neuroscientist and certified project manager with biotech experience, expert in database, IP, and team coordination.</p>
+      </div>
+      <!-- Guo -->
+      <div class="team-card">
+        <img src="assets/team_3.png" alt="Jian Xin Guo, PhD">
+        <h3>Jian Xin Guo, PhD</h3>
+        <p class="team-title">Chief Scientific Officer</p>
+        <p>Polymer chemist with a background at Johnson & Johnson and OHSU, specializing in foam-based therapeutic delivery systems.</p>
+      </div>
+      <!-- Rockweiler -->
+      <div class="team-card">
+        <img src="assets/team_4.png" alt="Holly Rockweiler, MS">
+        <h3>Holly Rockweiler, MS</h3>
+        <p class="team-title">Chief Technology Officer</p>
+        <p>CEO of Madorra and former Stanford Biodesign Fellow, experienced in medical device innovation and NIH-funded research.</p>
+      </div>
+    </div>
 
-        <h2>Scientific Advisory Board</h2>
-        <ul>
-            <li><strong>Dr. David Archer</strong> – Clinical Trial Consultant: International expert in infertility, former president of multiple OB-GYN societies, active advisor since 2014.</li>
-            <li><strong>Dr. Charles Carignan</strong> – Product Development Consultant: Ex-CEO of multiple medtech companies, former CMO of Boston Scientific, extensive FDA and WHO experience.</li>
-            <li><strong>Bob Katz, MS, MBA</strong> – Product Development Consultant: CEO of ForwardVue Pharm, took VeraCept IUD from pre-clinical to Phase 3, business advisor for TSDS.</li>
-            <li><strong>Dr. Amy Thurmond</strong> – Clinical Consultant: Pioneer in HSG-based infertility treatment, radiologist with 35 years’ experience and TSDS trial collaborator.</li>
-            <li><strong>Dr. Lisa Rarick</strong> – Regulatory Consultant: Former FDA division director, now independent consultant, on OPERM advisory board since 2018.</li>
-            <li><strong>Dr. Don Waller</strong> – Toxicology Consultant: UIC Professor Emeritus, product developer of Phexi, expert in pharmacology and toxicology for women’s health.</li>
-        </ul>
+    <div class="advisory-section">
+      <h2>Scientific Advisory Board</h2>
+      <ul class="advisory-list">
+        <li>
+          <span class="advisory-name">Dr. David Archer</span> –
+          <span class="advisory-role">Clinical Trial Consultant:</span>
+          International expert in infertility, former president of multiple OB-GYN societies, active advisor since 2014.
+        </li>
+        <li>
+          <span class="advisory-name">Dr. Charles Carignan</span> –
+          <span class="advisory-role">Product Development Consultant:</span>
+          Ex-CEO of multiple medtech companies, former CMO of Boston Scientific, extensive FDA and WHO experience.
+        </li>
+        <li>
+          <span class="advisory-name">Bob Katz, MS, MBA</span> –
+          <span class="advisory-role">Product Development Consultant:</span>
+          CEO of ForwardVue Pharm, took VeraCept IUD from pre-clinical to Phase 3, business advisor for TSDS.
+        </li>
+        <li>
+          <span class="advisory-name">Dr. Amy Thurmond</span> –
+          <span class="advisory-role">Clinical Consultant:</span>
+          Pioneer in HSG-based infertility treatment, radiologist with 35 years’ experience and TSDS trial collaborator.
+        </li>
+        <li>
+          <span class="advisory-name">Dr. Lisa Rarick</span> –
+          <span class="advisory-role">Regulatory Consultant:</span>
+          Former FDA division director, now independent consultant, on OPERM advisory board since 2018.
+        </li>
+        <li>
+          <span class="advisory-name">Dr. Don Waller</span> –
+          <span class="advisory-role">Toxicology Consultant:</span>
+          UIC Professor Emeritus, product developer of Phexi, expert in pharmacology and toxicology for women’s health.
+        </li>
+      </ul>
+    </div>
 
-        <h2>Business Advisory Board</h2>
-        <ul>
-            <li><strong>Sabrina Johnson</strong> – CEO of Daré Bioscience: Serial entrepreneur focused on women’s healthcare, former CFO/COO of Woman Care Global Trading, potential TSDS acquirer.</li>
-            <li><strong>Dr. Brian A. Bernick</strong> – Chairman, Micron Biomedical: Co-founder of TherapeuticsMD, expert in clinical and commercial success of Annovera®, Bijuva®, and other women’s health products.</li>
-            <li><strong>Andrew Barofsky, JD, MBA</strong> – CEO, RevMedx: Oregon biotech innovator behind trauma care devices and ObstetRX; former OBI board chair.</li>
-            <li><strong>James Sailer</strong> – Co-President, Population Council: Led FDA approval and US launch of Annovera®. Heads global partnerships for contraceptive development and equitable access.</li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2025 OryGyn Medical Devices, LLC. All rights reserved.</p>
-    </footer>
+    <div class="advisory-section">
+      <h2>Business Advisory Board</h2>
+      <ul class="advisory-list">
+        <li>
+          <span class="advisory-name">Sabrina Johnson</span> –
+          <span class="advisory-role">CEO of Daré Bioscience:</span>
+          Serial entrepreneur focused on women’s healthcare, former CFO/COO of Woman Care Global Trading, potential TSDS acquirer.
+        </li>
+        <li>
+          <span class="advisory-name">Dr. Brian A. Bernick</span> –
+          <span class="advisory-role">Chairman, Micron Biomedical:</span>
+          Co-founder of TherapeuticsMD, expert in clinical and commercial success of Annovera®, Bijuva®, and other women’s health products.
+        </li>
+        <li>
+          <span class="advisory-name">Andrew Barofsky, JD, MBA</span> –
+          <span class="advisory-role">CEO, RevMedx:</span>
+          Oregon biotech innovator behind trauma care devices and ObstetRX; former OBI board chair.
+        </li>
+        <li>
+          <span class="advisory-name">James Sailer</span> –
+          <span class="advisory-role">Co-President, Population Council:</span>
+          Led FDA approval and US launch of Annovera®. Heads global partnerships for contraceptive development and equitable access.
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 OryGyn Medical Devices, LLC</p>
+  </footer>
 </body>
 </html>
