@@ -1,1 +1,11 @@
-body { font-family: Arial; } img { max-width: 100%; height: auto; } .team-grid { display: flex; gap: 1em; }
+
+body { font-family: Arial, sans-serif; margin: 2em; background-color: #f1f8f6; }
+header, footer { background-color: #004d40; color: white; padding: 1em; text-align: center; }
+nav { background-color: #00796b; padding: 10px; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+section { background: white; padding: 2em; margin: auto; max-width: 1000px; }
+h2 { color: #004d40; }
+ul { padding-left: 1.5em; }
+img { width: 100%; border-radius: 10px; }
+.leadership-grid { display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; margin-bottom: 2em; }
+.leadership-grid div { text-align: center; max-width: 220px; }
